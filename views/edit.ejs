@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mongo db crud operation</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body class="bg-info">
+    <div class="row">
+        <div class="col-md-6 offset-md-3" style="background-color: #fff;margin-top:25px;padding:20px";>
+    
+        <table class="table table=striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>email</th>
+                    <th>mobile</th>
+                    <th>city</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <% employee.forEach(function(employee1){ 
+                        <td><%- employee1.name %></td>
+                        <td><%- employee1.email %></td>
+                        <td><%- employee1.mobile %></td>
+                        <td><%- employee1.city %></td>
+
+                        <td><a href="/edit/<%- employee1.id %>">edit</a></td>
+                        <td><a href="/delete/<%- employee1.id %>">delete</a></td>
+                        
+                        
+        
+                    
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        </div>
+    </div>
+    
+</body>
+</html>
